@@ -1,0 +1,10 @@
+cool-css:
+  css:
+    theme:
+      css/styles.css: {}
+
+cool-js:
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/jquery

@@ -36,4 +36,6 @@ xmlrpc.php
 /modules
 /profiles
 /scripts
-/themes
+
+# Ignore for theme project
+node_modules/
