@@ -39,3 +39,5 @@ xmlrpc.php
 
 # Ignore for theme project
 node_modules/
+themes/custom/cool/css
+themes/custom/cool/js

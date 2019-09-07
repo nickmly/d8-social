@@ -6,15 +6,17 @@ var livereload = require('gulp-livereload');
 gulp.task('sass', function() {
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./src/css'));
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('uglify', function() {
     return gulp.src('./src/js/**/*.js')
         .pipe(uglify('main.min.js'))
-})
+        .pipe(gulp.dest('./js'))
+});
 
 gulp.task('watch', function() {
     livereload.listen();
     gulp.watch('./src/sass/**/*.scss', gulp.series('sass'));
+    gulp.watch('./src/js/**/*.js', gulp.series('uglify'));
 });
